@@ -1,12 +1,27 @@
+body {
+  background-color: #eee;
+  font-family: "Noto Sans JP", sans-serif;
+}
 i {
   font-size: 4rem;
-  margin: 1.255rem;
 }
 header {
   display: flex;
+  position: fixed;
+  top: 0;
+  background-color: #eee;
+  z-index: 1;
 }
 #head-logo {
   width: 60vw;
+  display: flex;
+  margin: 1.255rem;
+}
+h1.header-text {
+  margin: 0;
+  margin-left: 0.96rem;
+  align-self: center;
+  font-family: "Abril Fatface", cursive;
 }
 ul {
   list-style: none;
@@ -22,4 +37,71 @@ nav#nav-bar {
 li > a {
   color: #333;
   font-size: 1.2rem;
+}
+form {
+  padding: 4rem;
+}
+#the-form {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("handman.jpg");
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.form-group {
+  display: flex;
+  justify-content: center;
+}
+.form-group h2 {
+  font-size: 2rem;
+  color: #eee;
+}
+#submit {
+  width: 50%;
+}
+
+.about-area {
+  display: flex;
+  padding: 0.25rem;
+  margin: 0;
+}
+.icon {
+  width: 20vw;
+  height: 125px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon-desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 80vw;
+  padding-left: 2.4rem;
+}
+.icon-desc p {
+  margin: 0;
+  font-size: 0.87rem;
+}
+.container {
+  max-width: 1000px;
+}
+.container-fluid {
+  margin-top: 6rem;
+  z-index: -9;
+}
+h3 {
+  font-size: 1.3rem;
+  margin: 0;
+  font-weight: 800;
+}
+section {
+  margin-top: 2rem;
+}
+section#video-area {
+  display: flex;
+  justify-content: center;
 }
