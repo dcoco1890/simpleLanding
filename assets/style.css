@@ -26,21 +26,23 @@ h1.header-text {
 ul {
   list-style: none;
   display: flex;
-
+  padding-left: 0;
   justify-content: space-around;
   align-items: center;
   height: 100%;
 }
 nav#nav-bar {
-  width: 40vw;
-}
-li > a {
-  color: #333;
-  font-size: 1.2rem;
+  width: 35vw;
 }
 form {
   padding: 4rem;
 }
+
+li > a {
+  color: #333;
+  font-size: 1.2rem;
+}
+
 #the-form {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("handman.jpg");
@@ -104,4 +106,50 @@ section {
 section#video-area {
   display: flex;
   justify-content: center;
+}
+
+@media (max-width: 800px) {
+  ul {
+    flex-direction: column;
+    margin: 0;
+  }
+  input#email {
+    width: 80%;
+  }
+  a.nav-link {
+    padding: 0;
+    font-size: 1rem;
+  }
+  h1.header-text {
+    font-size: 2rem;
+  }
+  form {
+    padding: 2rem;
+  }
+  i {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 600px) {
+  #head-logo {
+    width: 100vw;
+  }
+  header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  h1.header-text {
+    margin: 0 auto;
+  }
+  form {
+    padding: 0;
+    padding: 10px 0;
+  }
+  .container-fluid {
+    margin-top: 10rem;
+  }
+  #head-logo {
+    margin-bottom: 0;
+  }
 }
