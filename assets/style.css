@@ -2,8 +2,32 @@ body {
   background-color: #eee;
   font-family: "Noto Sans JP", sans-serif;
 }
-i {
+i.main-tool {
   font-size: 4rem;
+}
+i.main-tool:hover {
+  cursor: pointer;
+  animation-name: icon;
+  animation-duration: 2s;
+}
+
+div#screw {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 6rem;
+  align-items: center;
+  padding-top: 4rem;
+  position: relative;
+  top: 50px;
+}
+
+div#screw i {
+  font-size: 7rem;
+  color: rgba(0, 0, 0, 0.5);
+}
+i.screwdrive {
+  animation: 4s linear infinite screw;
 }
 header {
   display: flex;
@@ -23,7 +47,7 @@ h1.header-text {
   align-self: center;
   font-family: "Abril Fatface", cursive;
 }
-ul {
+ul#head-nav {
   list-style: none;
   display: flex;
   padding-left: 0;
@@ -38,7 +62,7 @@ form {
   padding: 4rem;
 }
 
-li > a {
+li > a.nav-link {
   color: #333;
   font-size: 1.2rem;
 }
@@ -91,7 +115,11 @@ li > a {
 .container {
   max-width: 1000px;
 }
+#about {
+  padding-top: 8rem;
+}
 .container-fluid {
+  padding-top: 4rem;
   margin-top: 6rem;
   z-index: -9;
 }
@@ -107,9 +135,33 @@ section#video-area {
   display: flex;
   justify-content: center;
 }
+footer > * {
+  margin: 0;
+  padding: 0;
+}
+footer {
+  background-color: #ddd;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-top: 1rem;
+  padding: 0.5rem;
+}
+footer p {
+  font-size: 14px;
+  padding-top: 0.5rem;
+}
 
+ul#foot {
+  display: flex;
+  list-style: none;
+}
+ul#foot li {
+  padding: 0 0.25rem;
+}
 @media (max-width: 800px) {
-  ul {
+  ul#head-nav {
     flex-direction: column;
     margin: 0;
   }
@@ -151,5 +203,18 @@ section#video-area {
   }
   #head-logo {
     margin-bottom: 0;
+  }
+}
+
+@keyframes icon {
+  100% {
+    color: green;
+  }
+}
+@keyframes screw {
+  0% {
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
