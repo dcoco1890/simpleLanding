@@ -145,7 +145,7 @@ footer {
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-end;
-  margin-top: 1rem;
+  margin-top: 3rem;
   padding: 0.5rem;
 }
 footer p {
@@ -159,6 +159,77 @@ ul#foot {
 }
 ul#foot li {
   padding: 0 0.25rem;
+}
+
+#products {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: calc(100% / 3);
+  margin: 10px;
+  border: 1px solid #000;
+  border-radius: 3px;
+  height: 18rem;
+  /* background-image: linear-gradient(
+    45deg,
+    rgba(255, 39, 100, 0.9),
+    rgb(231, 208, 76)
+  ); */
+}
+.card-head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(153, 153, 153, 0.527);
+  width: 100%;
+  padding: 0.5rem 0;
+}
+
+.card-head > h4 {
+  font-size: 1.3rem;
+  font-family: "Abril Fatface", cursive;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.7);
+}
+.card-bod {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0.25rem;
+  padding-bottom: 0.7rem;
+  background-color: #eee;
+  height: 100%;
+}
+
+.select-but {
+  background-image: linear-gradient(
+    45deg,
+    rgba(255, 39, 100, 0.9),
+    rgb(231, 208, 76)
+  );
+  border-style: inset;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  border-radius: 0px;
+  width: 50%;
+  padding: 0.9rem;
+}
+.card-bod p {
+  margin: 0;
+  margin: 0.25rem 0;
+}
+.select-but:hover {
+  animation: 2s linear butt-hov;
+}
+#video-area,
+#prices {
+  padding-top: 3rem;
 }
 @media (max-width: 800px) {
   ul#head-nav {
@@ -180,6 +251,13 @@ ul#foot li {
   }
   i {
     font-size: 3rem;
+  }
+  .card {
+    max-width: 300px;
+    width: 100%;
+  }
+  #products {
+    flex-direction: column;
   }
 }
 @media (max-width: 600px) {
@@ -216,5 +294,14 @@ ul#foot li {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes butt-hov {
+  0% {
+    border: 2px solid white;
+  }
+  100% {
+    border: 2px solid black;
   }
 }
